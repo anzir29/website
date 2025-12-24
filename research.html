@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Anjir Ahmed Chowdhury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="site-title">
+                <a href="index.html">Anjir's Homepage</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="news.html">News</a></li>
+                <li><a href="Files/AAC_CV.pdf"
+                        target="_blank">CV</a></li>
+                <li><a href="https://scholar.google.com/citations?user=8Ky_ZLUAAAAJ&hl=en&oi=ao"
+                        target="_blank">Publication</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Left Column - Fixed Profile Section -->
+        <div class="left-column">
+            <section class="profile-section">
+                <img src="Resources/Profilepicture.jpg" alt="Profile Picture">
+                <div class="profile-header">
+                    <h1 class="profile-name">Anjir Ahmed Chowdhury</h1>
+                    <div class="profile-title">Research Assistant & PhD Candidate @ University of Houston</div>
+                    <div class="profile-subtitle">Large Language Models (LLMs)</div>
+                </div>
+                <div class="profile-links">
+                    <ul class="link-list">
+                        <li>
+                            <a href="https://www2.cs.uh.edu/~fyan/research.html" target="_blank">
+                                <span class="link-icon"><i class="fas fa-location-dot" style="color:#000;"></i></span>
+                                <span>Intelligent Data and Systems Lab</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Houston,+TX" target="_blank">
+                                <span class="link-icon"><i class="fas fa-location-dot" style="color:#000;"></i></span>
+                                <span>Houston, TX, USA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:aachowd4@cougarnet.uh.edu">
+                                <span class="link-icon"><i class="fas fa-envelope" style="color:#000;"></i></span>
+                                <span>Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/anjir29/">
+                                <span class="link-icon"><i class="fab fa-linkedin" style="color:#0A66C2;"></i></span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/anzir29">
+                                <span class="link-icon"><i class="fab fa-github"></i></span>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=8Ky_ZLUAAAAJ&hl=en">
+                                <span class="link-icon"><i class="fas fa-graduation-cap"
+                                        style="color:#4285F4;"></i></span>
+                                <span>Google Scholar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Highlited News Section under Profile -->
+            <section class="News-under-profile">
+                <h2 class="section-title">📰 Highlited News</h2>
+
+                <article class="news-card">
+                    <a href="#">
+                        <h5>📢Attended NeurIPS 2025</h5>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <h5>📌Received Bangladesh–Sweden Trust Fund (BSTF) Travel Grant</h5>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <h5>🧾Passed PhD RCE (Candidacy Exam)</h5>
+                    </a>
+                </article>
+            </section>
+        </div>
+
+        <!-- Right Column - Research Content -->
+        <div class="right-column">
+            <section class="research-under-profile">
+                <h2 class="section-title">🔬 Ongoing Research</h2>
+
+                <article class="research-card">
+                    <span class="research-tag">Ongoing</span>
+                    <h3>Synthetic Data & Prompt Engineering for LLM Alignment</h3>
+                    <p><strong>A. A. Chowdhury</strong>, S. Zawad, and F. Yan</p>
+                    <p><strong>Summary : </strong> Developed prompt-optimized synthetic data pipelines to improve LLM alignment through instruction design, 
+                        synthetic dataset creation, and multi-stage fine-tuning. Closely collaborating with Dr. Syed Zawad <strong>(IBM Research)</strong> as the lead student, 
+                        contributing extensively across development, experimentation, and evaluation. </p>
+
+                    <p><strong> Contributions: </strong> (i) Designed persona-based prompts to generate <strong>synthetic data</strong> for reasoning, math, coding, and instruction tasks.
+                        (ii) Implemented multi-stage training with iterative <strong>SFT</strong> updates.
+                        (iii) Fine-tuned <strong>LLaMA-3.1 8B</strong> and <strong>Qwen2.5 7B</strong> using multi-GPU <strong>distributed training</strong>.
+                        (iv) Used <strong>Ollama</strong> and <strong>vLLM</strong> for efficient inference and evaluated models with <strong>LM Eval Harness</strong>.</p>
+                </article>
+
+                <article class="research-card">
+                    <span class="research-tag">ICLR'26</span>
+                    <h3>PEML: Parameter-efficient Multi-Task Learning with Optimized Continuous Prompts</h3>
+                    <p><strong>A. A. Chowdhury</strong>, S. Zawad, X. Ma, X. Dong, and F. Yan</p>
+                    <p><strong>Summary: </strong> Proposed a unified <strong>parameter-efficient framework</strong> for <strong>multi-task learning</strong>, 
+                        integrating <strong>prompt optimization</strong> with <strong>low-rank adaptation</strong> to improve performance across NLP benchmarks. 
+                        Working closely with Dr. Syed Zawad <strong>(IBM Research)</strong> and receiving support from Dr. Xiaolong Ma <strong>(Argonne National Laboratory)</strong>. 
+                        Serving as the lead student overseeing model design, training workflows, and experimental evaluation. </p>
+
+                        <p><strong> Contributions: </strong>(i) Built <strong>PEML</strong> by integrating <strong>PrefixNAS</strong> for prompt search with <strong>LoRA</strong> adaptation.
+                        (ii) Evaluated on <strong>GLUE</strong>, <strong>SuperGLUE</strong>, and <strong>MMLU</strong>, achieving up to <strong>6.67%</strong> average gains over SOTA.
+                        (iii) Created an automated <strong>NAS module</strong> to optimize prompts and reduce manual tuning.
+                        (iv) Achieved efficient resource use with reduced <strong>VRAM overhead</strong>. </p>
+                </article>
+
+                <article class="research-card">
+                    <span class="research-tag">IEEE CCGrid'26</span>
+                    <h3>PRENAS: A Provident and Resource Efficient System for Neural Architecture Search</h3>
+                    <p>X. Dong, X. Ma, <strong>A. A. Chowdhury</strong>, S. Zawad, R. Kettimuthu, and F. Yan</p>
+                    <p><strong>Summary: </strong> Designed and implemented a <strong>resource-efficient NAS system</strong> 
+                        that dynamically allocates computational resources based on architecture <strong>scalability</strong> and <strong>performance prediction</strong> to 
+                        accelerate neural architecture search for <strong>LLM fine-tuning</strong> and <strong>CNN architectures</strong></p>
+
+                    <p><strong> Contributions:</strong> (i) Built the NAS framework with <strong>RAY</strong> and <strong>Optuna</strong> for scalable, distributed LLM fine-tuning search.
+                    (ii) Integrated distributed training with <strong>Accelerate</strong> and <strong>multi-GPU</strong> profiling to measure architecture scalability.
+                    (iii) Developed <strong>PEFT-NAS-Bench</strong>, an open-source benchmark for prefix-tuning NAS, including hyperparameter and scalability profiling.</p> 
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <!-- Expanded Research Modal -->
+    <div id="research-modal" class="research-modal">
+        <!-- Same modal content as before -->
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Anjir Ahmed Choudhury. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

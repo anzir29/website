@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Anjir Ahmed Chowdhury</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="site-title">
+                <a href="index.html">Anjir's Homepage</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="news.html">News</a></li>
+                <li><a href="Files/AAC_CV.pdf"
+                        target="_blank">CV</a></li>
+                <li><a href="https://scholar.google.com/citations?user=8Ky_ZLUAAAAJ&hl=en&oi=ao"
+                        target="_blank">Publication</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="Experience.html">Experience</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="main-content">
+        <!-- Left Column - Fixed Profile Section -->
+        <div class="left-column">
+            <section class="profile-section">
+                <img src="Resources/Profilepicture.jpg" alt="Profile Picture">
+                <div class="profile-header">
+                    <h1 class="profile-name">Anjir Ahmed Chowdhury</h1>
+                    <div class="profile-title">Research Assistant & PhD Candidate @ University of Houston</div>
+                    <div class="profile-subtitle">Large Language Models (LLMs)</div>
+                </div>
+                <div class="profile-links">
+                    <ul class="link-list">
+                        <li>
+                            <a href="https://www2.cs.uh.edu/~fyan/research.html" target="_blank">
+                                <span class="link-icon"><i class="fas fa-location-dot" style="color:#000;"></i></span>
+                                <span>Intelligent Data and Systems Lab</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.google.com/maps/place/Houston,+TX" target="_blank">
+                                <span class="link-icon"><i class="fas fa-location-dot" style="color:#000;"></i></span>
+                                <span>Houston, TX, USA</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:aachowd4@cougarnet.uh.edu">
+                                <span class="link-icon"><i class="fas fa-envelope" style="color:#000;"></i></span>
+                                <span>Email</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/anjir29/">
+                                <span class="link-icon"><i class="fab fa-linkedin" style="color:#0A66C2;"></i></span>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/anzir29">
+                                <span class="link-icon"><i class="fab fa-github"></i></span>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://scholar.google.com/citations?user=8Ky_ZLUAAAAJ&hl=en">
+                                <span class="link-icon"><i class="fas fa-graduation-cap"
+                                        style="color:#4285F4;"></i></span>
+                                <span>Google Scholar</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Highlited News Section under Profile -->
+            <section class="News-under-profile">
+                <h2 class="section-title">📰 Highlited News</h2>
+
+                <article class="news-card">
+                    <a href="#">
+                        <h5>📢Attended NeurIPS 2025</h5>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <h5>📌Received Bangladesh–Sweden Trust Fund (BSTF) Travel Grant</h5>
+                    </a>
+                </article>
+
+                <article class="news-card">
+                    <a href="#">
+                        <h5>🧾Passed PhD RCE (Candidacy Exam)</h5>
+                    </a>
+                </article>
+            </section>
+        </div>
+
+        <!-- Right Column - News Content -->
+        <div class="right-column">
+            <h1 class="section-title">📰 News & Milestones</h1>
+            <div class="news-feed" id="news-feed">
+                <!-- News articles will be loaded automatically -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal -->
+    <div id="news-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-title"></h2>
+            <div class="article-meta" id="modal-meta"></div>
+            <div class="article-tags" id="modal-tags"></div>
+            <div class="article-content" id="modal-content"></div>
+            <div class="article-links" id="modal-links"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2025 Anjir Ahmed Choudhury. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Same JavaScript as before
+        const articles = [
+            {
+                "title": "Attended NeurIPS 2025",
+                "meta": "San Diego, CA | 3 Dec 2025",
+                "tags": ["#NeurIPS", "#MachineLearning", "#AIResearch", "#Conference"],
+                "shortContent": "Attended NeurIPS 2025 in San Diego to engage with cutting-edge research in machine learning and AI.",
+                "fullContent": "<p><strong>NeurIPS 2025 — Conference Attendance</strong>.</p><p>I attended the Conference on Neural Information Processing Systems (NeurIPS 2025) held in San Diego, California. The conference provided valuable exposure to state-of-the-art research across machine learning, deep learning, large language models, optimization, and AI systems, as well as opportunities to engage with researchers from academia and industry.</p>",
+                "thumbnail": "Resources/neurips_2025_sandiego.png",
+                "thumbnail": "Resources/n22.jpg",
+                "links": [{"text":"Website", "url":"https://neurips.cc/"}]
+            },
+
+
+            {
+                "title": "Received Bangladesh–Sweden Trust Fund (BSTF) Travel Grant",
+                "meta": "BSTF, Government of Sweden | Jan 2025",
+                "tags": ["#Award", "#TravelGrant", "#PhDLife", "#AcademicExcellence"],
+                "shortContent": "Honored to receive the Bangladesh–Sweden Trust Fund (BSTF) Travel Grant supporting Bangladeshi students pursuing higher studies abroad.",
+                "fullContent": "<p><strong>Bangladesh–Sweden Trust Fund (BSTF) Travel Grant Awarded</strong>.</p><p>I am honored to receive the Bangladesh–Sweden Trust Fund (BSTF) Travel Grant, established in 1984 with the generous support of the Government of Sweden to empower Bangladeshi students pursuing higher studies abroad. This prestigious grant is a great encouragement, reinforcing my commitment to academic excellence and inspiring me to continue my PhD journey. I am deeply grateful to the Government of Sweden and BSTF for their continued support.</p>",
+                "thumbnail": "Resources/n20.jpg",
+                "links": [{ "text": "List", "url": "Resources/1.jpg"}]
+            },
+            {
+                "title": "Passed PhD RCE (Candidacy Exam)",
+                "meta": "University of Houston | Nov 15, 2024",
+                "tags": ["#PhDCandidacy", "#Milestone", "#ComputerScience", "#AcademicProgress"],
+                "shortContent": "Successfully passed the PhD Research Candidacy Examination (RCE) at the University of Houston.",
+                "fullContent": "<p><strong>PhD Research Candidacy Examination Passed</strong>.</p><p>I successfully passed the PhD Research Candidacy Examination (RCE) on November 15, 2024, at the University of Houston. This milestone marks my advancement to PhD candidacy and represents a significant step forward in my doctoral research journey.</p>",
+                "thumbnail": "Resources/n21.jpg",
+                "links": [{"text":"Website", "url":"https://www.uh.edu/"}]
+            },
+
+            {
+                "title": "Federated Learning for Nuclei Segmentation & Classification",
+                "meta": "PLOS ONE | Nov 2024",
+                "tags": ["#MedicalAI", "#FederatedLearning", "#Histopathology", "#EdgeAI"],
+                "shortContent": "Published a federated deep learning framework for privacy-preserving nuclei segmentation and classification optimized for edge deployment.",
+                "fullContent": "<p><strong>New Research Published in PLOS ONE</strong>.</p><p>This study proposes a two-stage deep learning framework combining SegNet for nuclei segmentation and DenseNet121 for classification in histopathology images. The approach leverages FedAvg-based federated learning to ensure data privacy and applies full integer quantization for efficient edge-device deployment. Experimental results demonstrate strong segmentation and classification performance, surpassing state-of-the-art methods and highlighting clinical applicability in cancer diagnosis.</p>",
+                "thumbnail": "Resources/n17.png",
+                "links": [{ "text": "PDF", "url": "https://doi.org/10.1371/journal.pone.0322749" }]
+            },
+            {
+                "title": "Joined as Research Assistant at IDS Lab",
+                "meta": "Intelligent Data and Systems | 21 Aug 2023",
+                "tags": ["#ResearchAssistant", "#IDSLab", "#MachineLearning", "#LLMs"],
+                "shortContent": "Joined the Intelligent Data and Systems (IDS) Lab as a Research Assistant under Prof. Dr. Feng Yan at the University of Houston.",
+                "fullContent": "<p><strong>Research Assistant — Intelligent Data and Systems (IDS) Lab, University of Houston</strong>.</p><p>I joined the Intelligent Data and Systems (IDS) Lab as a Research Assistant under the supervision of Prof. Dr. Feng Yan, a tenured Associate Professor in the Computer Science and Electrical & Computer Engineering Departments at the University of Houston. The IDS Lab conducts cutting-edge research at the intersection of Big Data, Machine Learning, and Computer Systems, with active work in areas such as Large Language Models (LLMs), large-scale distributed deep learning, AutoML/Neural Architecture Search, federated learning, MLaaS, and serverless computing. This role allows me to contribute to high-impact research published at top-tier machine learning and systems venues while working in a Carnegie R1 research environment.</p>",
+                "thumbnail": "Resources/n21.jpg",
+                "links": [{"text":"Website", "url":"https://www2.cs.uh.edu/~fyan/"}]
+            },
+
+            {
+                "title": "Joined as Teaching Assistant",
+                "meta": "University of Houston, Computer Science | 21 Aug 2023",
+                "tags": ["#TeachingAssistant", "#UniversityOfHouston", "#Academia", "#PhDLife"],
+                "shortContent": "Joined the University of Houston as a Teaching Assistant in the Department of Computer Science.",
+                "fullContent": "<p><strong>Teaching Assistant — Department of Computer Science, University of Houston</strong>.</p><p>I joined the University of Houston as a Teaching Assistant in the Department of Computer Science, supporting undergraduate and graduate courses through instruction, mentoring, and academic assistance.</p>",
+                "thumbnail": "Resources/n21.jpg",
+                "links": [{"text":"Website", "url":"https://www.uh.edu/"}]
+            },
+
+            {
+            "title": "Joined PhD Program in Computer Science",
+            "meta": "University of Houston | 21 Aug 2023",
+            "tags": ["#PhD", "#ComputerScience", "#GraduateStudies", "#AcademicJourney"],
+            "shortContent": "Started my PhD journey in Computer Science at the University of Houston.",
+            "fullContent": "<p><strong>PhD Student, Computer Science — University of Houston</strong>.</p><p>I joined the PhD program in Computer Science at the University of Houston in August 2023. This marks an important milestone in my academic journey, focusing on advanced research and scholarly development in computer science.</p>",
+            "thumbnail": "Resources/n21.jpg",
+            "links": [{"text":"Website", "url":"https://www.uh.edu/"}]
+            },
+
+            {
+                "title": "Concluded Role as Lecturer at AIUB",
+                "meta": "AIUB | 16 Aug 2023",
+                "tags": ["#Career", "#Teaching", "#Transition"],
+                "shortContent": "Completed tenure as Lecturer at AIUB before beginning PhD studies at the University of Houston.",
+                "fullContent": "<p><strong>End of Lecturer Role at American International University-Bangladesh (AIUB)</strong>.</p><p>Concluded two years of teaching and research in the Computer Science department to pursue a PhD in Computer Science at the University of Houston, USA.</p>",
+                "thumbnail": "Resources/n1.jpg",
+                "links": [{ "text": "Website", "url": "https://www.aiub.edu/" }]
+            },
+            {
+                "title": "Left Centre for Advanced Machine Learning and Application Research Lab",
+                "meta": "CAMLAs | 15 Aug 2023",
+                "tags": ["#Research", "#Career", "#VisionAI"],
+                "shortContent": "Completed research engagement at the Centre for Advanced Machine Learning and Application (CAMLAs).",
+                "fullContent": "<p><strong>Research Role Concluded at CAMLAs, Bangladesh</strong>.</p><p>Finished work on efficient hyperparameter optimization and edge AI projects under Dr. S M Hasan Mahmud before relocating to the United States for PhD studies.</p>",
+                "thumbnail": "Resources/n15.jpg",
+                "links": []
+            },
+
+            {
+                "title": "Comparative Study of Hyperparameter Optimization for Deep Learning",
+                "meta": "IJCAI Proceedings | May 2022",
+                "tags": ["#DeepLearning", "#HyperparameterOptimization", "#AutoML", "#NeuralNetworks"],
+                "shortContent": "Conducted a comprehensive comparative analysis of popular hyperparameter optimization techniques across datasets and deep learning architectures.",
+                "fullContent": "<p><strong>Conference Paper Published in Algorithms for Intelligent Systems (AIS)</strong>.</p><p>This study investigates the effectiveness and optimization time of widely used hyperparameter optimization (HPO) techniques for deep learning models. Experiments were conducted using VGG16 and ResNet50 architectures on CIFAR-10 and Intel Image Classification datasets. Six HPO methods—Grid Search, Random Search, Genetic Algorithm, Bayesian Optimization, Hyperband, and Particle Swarm Optimization—were systematically compared. Results indicate no consistent performance pattern across datasets and architectures, with all methods showing comparable optimization times. The findings provide practical insights for researchers and practitioners selecting suitable HPO strategies and highlight open challenges in the HPO domain.</p>",
+                "thumbnail": "Resources/n19.png",
+                "links": [{ "text": "PDF", "url": "https://link.springer.com/chapter/10.1007/978-981-19-2350-0_42" }]
+            },
+
+
+
+            {
+                "title": "AI Model for Fetal Brain Abnormality Detection Published",
+                "meta": "Journal of King Saud University | 14 Aug 2023",
+                "tags": ["#Publication", "#HealthcareAI", "#MedicalImaging", "#CNN"],
+                "shortContent": "CNN-based stacking strategy for detecting fetal brain abnormalities from MRI images published in a Q1 journal.",
+                "fullContent": "<p><strong>StackFBAs: Detection of Fetal Brain Abnormalities Using CNN with Stacking Strategy from MRI Images</strong>.</p><p>Authors: Anjir Ahmed Chowdhury, S.M. Hasan Mahmud, Khadija Kubra Shahjalal Hoque, et al.</p><p>This research proposes a convolutional neural network with a stacking strategy to improve the detection accuracy of fetal brain abnormalities using MRI scans.</p>",
+                "thumbnail": "Resources/n9.jpeg",
+                "links": [{ "text": "PDF", "url": "https://doi.org/10.1016/j.jksuci.2023.101647" }]
+            },
+            {
+                "title": "Joined Centre for Advanced Machine Learning and Application Research Lab",
+                "meta": "CAMLAs | Feb 2022",
+                "tags": ["#Research", "#VisionAI", "#NeuralArchitectureSearch"],
+                "shortContent": "Began research on vision models and neural architecture search at the Centre for Advanced Machine Learning and Application (CAMLAs).",
+                "fullContent": "<p><strong>Researcher at Centre for Advanced Machine Learning and Application (CAMLAs), Bangladesh</strong>.</p><p>Worked under Dr. S M Hasan Mahmud on projects involving efficient hyperparameter optimization, edge AI, and neural architecture search for computer vision applications.</p>",
+                "thumbnail": "Resources/n15.jpg",
+                "links": []
+            },
+            {
+                "title": "Paper on Hyperparameter Optimization Published in IEEE Access",
+                "meta": "IEEE Access | Jan 2022",
+                "tags": ["#Publication", "#EdgeAI", "#Optimization", "#DeepLearning"],
+                "shortContent": "Research on energy-efficient hyperparameter optimization for edge devices published in IEEE Access (Q1, IF: 3.4).",
+                "fullContent": "<p><strong>Deepgpho: Quantized Greedy Hyperparameter Optimization in Deep Neural Networks for On-the-Fly Learning</strong>.</p><p>Authors: Anjir Ahmed Chowdhury, Md Abir Hossen, Md Ali Azam, Md Hafizur Rahman.</p><p>This work introduces a greedy hyperparameter optimization (GHO) algorithm that reduces energy consumption by 3× and speeds up training 2× compared to Bayesian Optimization, targeting edge AI deployment on devices like NVIDIA Jetson Nano.</p>",
+                "thumbnail": "Resources/n10.jpeg",
+                "links": [{ "text": "PDF", "url": "https://ieeexplore.ieee.org/abstract/document/9676610" }]
+            },
+            {
+                "title": "Conference Paper on Fake Money Detection Published",
+                "meta": "ICCA 2022 | Jan 2022",
+                "tags": ["#Publication", "#ComputerVision", "#DeepLearning", "#Security"],
+                "shortContent": "Research on deep learning models for UV ink-based fake money detection presented at ICCA 2022.",
+                "fullContent": "<p><strong>Evaluation of Deep Learning models on UV ink: a Fake Money detection scheme with RPN</strong>.</p><p>Authors: Anjir Ahmed Chowdhury, Argho Das, Debajyoti Karmaker & Khadija Kubra Shahjalal Hoque.</p><p>Presented at the 2nd International Conference on Computing Advancements (ICCA2022), this paper explores Region Proposal Networks for counterfeit currency detection.</p>",
+                "thumbnail": "Resources/n14.png",
+                "links": [{ "text": "PDF", "url": "https://dl.acm.org/doi/10.1145/3542954.3542965" }]
+            },
+            {
+                "title": "Award: Vice Chancellor’s Award for MSc Thesis",
+                "meta": "AIUB | 20th Convocation | Oct 2021",
+                "tags": ["#Award", "#Thesis", "#AcademicExcellence"],
+                "shortContent": "Received Vice Chancellor’s Award for outstanding MSc thesis on COVID-19 prediction using AI.",
+                "fullContent": "<p><strong>Vice Chancellor’s Award</strong> for the MSc thesis titled <em>Analysis and Prediction of COVID-19 Pandemic in Bangladesh by using ANFIS and LSTM Network</em>.</p><p>The award recognizes exceptional research contribution and academic excellence at the 20th convocation of AIUB in October 2021.</p>",
+                "thumbnail": "Resources/n12.jpg",
+                "links": []
+            },
+            {
+                "title": "Award: Summa Cum Laude in MSc Program",
+                "meta": "AIUB | 20th Convocation | Oct 2021",
+                "tags": ["#Award", "#AcademicExcellence", "#MSc"],
+                "shortContent": "Awarded Summa Cum Laude for outstanding academic performance in the Master of Computer Science program.",
+                "fullContent": "<p><strong>Summa Cum Laude Award</strong> in the MSCS program for achieving excellent results and maintaining a 4.00/4.00 GPA.</p><p>The award recognizes top-performing graduates and was conferred during the university convocation.</p>",
+                "thumbnail": "Resources/n11.jpg",
+                "links": []
+            },
+            {
+                "title": "Award: Dean’s List Award",
+                "meta": "AIUB | oct 2021",
+                "tags": ["#Award", "#AcademicExcellence", "#MSc"],
+                "shortContent": "Received Dean's List Award for maintaining consistently high CGPA throughout the MSc program.",
+                "fullContent": "<p><strong>Dean’s List Award</strong> for maintaining a consistently high CGPA throughout the M.Sc program in Computer Science at AIUB.</p>",
+                "thumbnail": "Resources/n8.jpg",
+                "links": [{ "text": "PDF", "url": "https://www.aiub.edu/Files/Uploads/deans-list-deans-fall19-20---spring22-23.pdf" }]
+            },
+            {
+                "title": "Left Cognitive & Neuro Research Lab",
+                "meta": "AIUB | sep 2021",
+                "tags": ["#Research", "#MachineLearning", "#Epidemiology"],
+                "shortContent": "Completed research role at the Cognitive & Neuro Research Lab after contributing to COVID-19 modeling projects.",
+                "fullContent": "<p><strong>Research Role Concluded at Cognitive & Neuro Research Lab, AIUB</strong>.</p><p>Finished part-time research on machine learning algorithms and epidemiological modeling under Prof. Dr. Khandaker Tabin Hasan, focusing on COVID-19 dynamics in Bangladesh.</p>",
+                "thumbnail": "Resources/n16.png",
+                "links": []
+            },
+            {
+                "title": "Joined as Lecturer at AIUB",
+                "meta": "Sep 2021",
+                "tags": ["#Career", "#Teaching", "#AIUB"],
+                "shortContent": "Began role as Lecturer in the Computer Science department at American International University-Bangladesh.",
+                "fullContent": "<p><strong>Lecturer at American International University-Bangladesh (AIUB)</strong>.</p><p>Started teaching undergraduate courses in computer science and engineering, while continuing research in machine learning and AI applications.</p>",
+                "thumbnail": "Resources/n1.jpg",
+                "links": [{ "text": "Website", "url": "https://www.aiub.edu/" }]
+            },
+            {
+                "title": "Left Lecturer Position at Primeasia University",
+                "meta": "PU | Sep 2021",
+                "tags": ["#Career", "#Teaching", "#Transition"],
+                "shortContent": "Completed teaching role at Primeasia University to join AIUB as Lecturer.",
+                "fullContent": "<p><strong>End of Lecturer Role at Primeasia University, Dhaka</strong>.</p><p>Concluded teaching responsibilities in the Computer Science/Engineering department after 8 months to accept a lecturer position at AIUB.</p>",
+                "thumbnail": "Resources/n5.png",
+                "links": [{ "text": "Website", "url": "https://primeasia.edu.bd/" }]
+            },
+            {
+                "title": "Citizen Surveillance and Social-Credit System Published",
+                "meta": "AIUB Journal of Science and Engineering | 15 May 2021",
+                "tags": ["#Publication", "#CapstoneProject", "#DeepLearning", "#ComputerVision"],
+                "shortContent": "Undergraduate capstone project on citizen surveillance and social-credit systems published in the AIUB Journal of Science and Engineering.",
+                "fullContent": "<p><strong>Design and Development of Citizen Surveillance and Social-Credit Information System for Bangladesh</strong>.</p><p>Authors: Anjir Ahmed Chowdhury, Sabrina Kashem Chowdhury, Md Hanif, Sadia Noor Nosheen, & Md. Saniat Rahman Zishan.</p><p>This work was published in the <em>AIUB Journal of Science and Engineering</em> and presents a deep learning–based framework for large-scale citizen surveillance and social-credit assessment, targeting improved public safety and data-driven governance in Bangladesh.</p>",
+                "thumbnail": "Resources/n13.png",
+                "links": [{ "text": "PDF", "url": "https://www.researchgate.net/profile/Anjir-Chowdhury-2/publication/351727503_Design_and_Development_of_Citizen_Surveillance_and_Social-Credit_Information_System_for_Bangladesh/links/60a669d3a6fdcc6d62494afe/Design-and-Development-of-Citizen-Surveillance-and-Social-Credit-Information-System-for-Bangladesh.pdf" }]
+            },
+            {
+                "title": "COVID-19 Prediction Model Using LSTM and ANFIS Published",
+                "meta": "Cognitive Computation |20 Mar 2021",
+                "tags": ["#Publication", "#AI", "#Healthcare", "#TimeSeries"],
+                "shortContent": "Master's thesis on COVID-19 prediction in Bangladesh published in Cognitive Computation (Q1, IF: 4.3).",
+                "fullContent": "<p><strong>Analysis and Prediction of COVID-19 Pandemic in Bangladesh by Using ANFIS and LSTM Network</strong>.</p><p>Authors: Anjir Ahmed Chowdhury, Khandaker Tabin Hasan & Khadija Kubra Shahjalal Hoque.</p><p>This research compares LSTM and ANFIS models for forecasting COVID-19 trends in Bangladesh, providing data-driven insights for pandemic management.</p>",
+                "thumbnail": "Resources/n7.png",
+                "links": [{ "text": "PDF", "url": "https://link.springer.com/article/10.1007/s12559-021-09859-0" }]
+            },
+            {
+                "title": "4P Model for COVID-19 Dynamic Prediction Published",
+                "meta": "Cognitive Computation | 17 Feb 2021",
+                "tags": ["#Publication", "#MachineLearning", "#Epidemiology", "#Healthcare"],
+                "shortContent": "Statistical and machine learning model for dynamic COVID-19 prediction published in a Q1 journal.",
+                "fullContent": "<p><strong>4P Model for Dynamic Prediction of COVID-19: a Statistical and Machine Learning Approach</strong>.</p><p>Authors: Khandaker Tabin Hasan, M. Mostafizur Rahman, Md. Mortuza Ahmmed, <strong>Anjir Ahmed Chowdhury</strong> & Mohammad Khairul Islam.</p><p>This paper presents a 4P (Government Control, Public Compliance, Infection Rate, Test Positivity) model to dynamically predict COVID-19 spread in Bangladesh using nonlinear regression.</p>",
+                "thumbnail": "Resources/n6.png",
+                "links": [{ "text": "PDF", "url": "https://link.springer.com/article/10.1007/s12559-020-09786-6" }]
+            },
+            {
+                "title": "Joined Primeasia University as Lecturer",
+                "meta": "PU| 8 Feb 2021",
+                "tags": ["#Career", "#Teaching", "#Primeasia"],
+                "shortContent": "Began first academic teaching role as Lecturer at Primeasia University, Dhaka.",
+                "fullContent": "<p><strong>Lecturer at Primeasia University, Dhaka, Bangladesh</strong>.</p><p>Started academic career teaching computer science and engineering courses to undergraduate students.</p>",
+                "thumbnail": "Resources/n5.png",
+                "links": [{ "text": "Website", "url": "https://primeasia.edu.bd/" }]
+            },
+            {
+            "title": "Cost-Effective Bomb Defusing Robot with Dual Camera Live Streaming",
+            "meta": "ICREST | January 2021",
+            "tags": ["#Robotics", "#EmbeddedSystems", "#DisasterResponse", "#IoT"],
+            "shortContent": "Designed and implemented a low-cost, remotely controlled bomb disposal robot with dual-camera live streaming and multi-sensor safety features.",
+            "fullContent": "<p><strong>Conference Paper Published at ICREST 2021</strong>.</p><p>This work presents the design and implementation of a cost-effective bomb defusing robot aimed at minimizing human risk during hazardous operations. The robot features a 4-DOF robotic arm capable of lifting objects up to 5kg, along with a reinforced chassis that can carry dismantled bomb parts up to 10kg. Equipped with gas, fire, and obstacle detection sensors, the system enhances operational safety. Raspberry Pi was used as the main processor, while Arduino Mega handled sensing and communication. Dual cameras enable live video streaming, and the robot can be remotely controlled via the internet using a Python-based web server interface. Mechanical and electronic designs were validated using SolidWorks and Proteus.</p>",
+            "thumbnail": "Resources/n18.png",
+            "links": [{ "text": "PDF", "url": "https://doi.org/10.1109/ICREST51555.2021.9331203" }]
+             },
+
+            {
+                "title": "Master of Science in Computer Science Completed",
+                "meta": "American International University-Bangladesh (AIUB) | 23 Sep 2020",
+                "tags": ["#Graduation", "#Masters", "#ComputerScience", "#ArtificialIntelligence"],
+                "shortContent": "Completed M.Sc. in Computer Science with a major in Intelligent Systems (AI), achieving a perfect GPA of 4.00/4.00.",
+                "fullContent": "<p>Anjir Ahmed Choudhury completed a Master of Science in Computer Science from American International University-Bangladesh (AIUB) in September 2020, majoring in Intelligent Systems (Artificial Intelligence) with a perfect GPA of 4.00/4.00.</p><p>Master’s Thesis: <strong>Analysis and Prediction of COVID-19 Pandemic in Bangladesh using ANFIS and LSTM Network</strong>, focusing on hybrid neuro-fuzzy systems and deep learning models for time-series forecasting in public health.</p>",
+                "thumbnail": "Resources/n1.jpg",
+                "links": []
+            },
+
+            {
+                "title": "YOLO-Based Enhancement of Public Safety Published",
+                "meta": "AIUB Journal of Science and Engineering | 30 Aug 2020",
+                "tags": ["#AJSE", "#Publication", "#YoloV3",],
+                "shortContent": "A sub project derived from the main bachelor thesis published in AIUB Journal of Science and Engineering.",
+                "fullContent": "<p>YOLO-Based Enhancement of Public Safety on Roads and Transportation in Bangladesh.</p><p>Anjir Ahmed Chowdhury, Sabrina Kashem Chowdhury, Md Hanif, Sadia Noor Nosheen, & Md. Saniat Rahman Zishan.</p><p>AIUB Journal of Science and Engineering (2020) | (Cite score:1.6, Q4)</p>",
+                "links": [{ "text": "PDF", "url": "https://www.researchgate.net/profile/Anjir-Chowdhury-2/publication/344460680_YOLO-Based_Enhancement_of_Public_Safety_on_Roads_and_Transportation_in_Bangladesh/links/5f788444458515b7cf62e462/YOLO-Based-Enhancement-of-Public-Safety-on-Roads-and-Transportation-in-Bangladesh.pdf" }],
+                "thumbnail": "Resources/n3.png"
+            },
+            {
+                "title": "Completed Tenure at SOLshare Ltd",
+                "meta": "SOLshare Ltd, Dhaka, Bangladesh | July 2020",
+                "tags": ["#CareerTransition", "#IndustryExperience", "#SOLshare", "#ProfessionalGrowth"],
+                "shortContent": "Concluded professional tenure at SOLshare Ltd after contributing as an R&D Intern and Jr. Firmware Testing Engineer.",
+                "fullContent": "<p>In July 2020, Anjir Ahmed Choudhury concluded his tenure at SOLshare Ltd, Dhaka, Bangladesh. During this period, he progressed from a Research & Development Intern to a Jr. Firmware Testing Engineer, contributing to firmware testing, product reliability, and scalable climate-tech energy solutions.</p><p>This industry experience provided strong exposure to real-world system development, testing pipelines, and energy-focused technology platforms, laying a foundation for future research and advanced studies.</p>",
+                "thumbnail": "Resources/n4.png",
+                "links": [{ "text": "Company Website", "url": "https://solshare.com/" }]
+            },
+
+            {
+                "title": "Promotion to Jr. Firmware Testing Engineer at SOLshare Ltd",
+                "meta": "SOLshare Ltd, Dhaka, Bangladesh | Feb 2020",
+                "tags": ["#Promotion", "#FirmwareTesting", "#SOLshare", "#CareerMilestone"],
+                "shortContent": "Promoted to Junior Firmware Testing Engineer at SOLshare Ltd, Dhaka, contributing to firmware testing and development projects.",
+                "fullContent": "<p>Following a successful internship, Anjir Ahmed Choudhury was promoted to Jr. Firmware Testing Engineer at SOLshare Ltd in February 2020. In this role, he contributed to firmware testing and development, ensuring high-quality and scalable energy solutions for the company's climate-tech projects.</p>",
+                "thumbnail": "Resources/n4.png",
+                "links": [{ "text": "Company Website", "url": "https://solshare.com/" }]
+            },
+
+            {
+                "title": "Internship at SOLshare Ltd, Dhaka, Bangladesh",
+                "meta": "Research & Development Intern | 29 Jan 2020",
+                "tags": ["#Internship", "#R&D", "#SOLshare", "#ClimateTech"],
+                "shortContent": "Completed an internship at SOLshare Ltd, a leading climate-tech company in Dhaka, contributing to research and development projects in energy solutions.",
+                "fullContent": "<p>Anjir Ahmed Choudhury completed an internship at SOLshare Ltd, Dhaka, Bangladesh as a Research & Development Intern in January 2020. SOLshare is a climate-tech company providing scalable energy solutions through their globally recognized platform, SOLbazaar. The internship involved understanding client expectations, contributing to technology solutions, and bridging energy gaps in local markets.</p><p>More info: </p>",
+                "thumbnail": "Resources/n4.png",
+                "links": [{ "text": "Company Website", "url": "https://solshare.com/" }]
+            },
+
+            {
+                "title": "Vice Chancellor’s Award for Capstone Project",
+                "meta": "American International University-Bangladesh (AIUB) | 26 Jan 2020",
+                "tags": ["#Award", "#Capstone", "#AIUB", "#19th_Convocation"],
+                "shortContent": "Received the Vice Chancellor’s Award in the B.Sc program for outstanding capstone project and thesis during the 19th convocation.",
+                "fullContent": "<p>Anjir Ahmed Choudhury was honored with the Vice Chancellor’s Award for excellence in the B.Sc program's capstone project and thesis at the 19th convocation of American International University-Bangladesh (AIUB).</p><p><strong>Thesis:</strong> Deep Learning-Based Design and Development of Citizen Surveillance and Social-Credit Information System for Bangladesh.</p><p><strong>Supervisor:</strong> Dr. Saniat Rahman Zishan.</p>",
+                "thumbnail": "Resources/n2.jpg",
+                "links": [{ "text": "News", "url": "https://www.aiub.edu/aiubs-19th-convocation-held" }]
+            },
+            {
+                "title": "Joined Cognitive & Neuro Research Lab, AIUB",
+                "meta": "2019",
+                "tags": ["#Research", "#MachineLearning", "#HealthcareAI"],
+                "shortContent": "Began part-time research role focusing on machine learning algorithms and optimization at AIUB's Cognitive & Neuro Research Lab.",
+                "fullContent": "<p><strong>Part-time Researcher at Cognitive & Neuro Research Lab, AIUB</strong>.</p><p>Joined under Prof. Dr. Khandaker Tabin Hasan to work on machine learning algorithms, modeling, and optimization projects, beginning with COVID-19 pandemic analysis research.</p>",
+                "thumbnail": "Resources/n16.png",
+                "links": []
+            },
+            {
+                "title": "Bachelor of Science in Computer Engineering Completed",
+                "meta": "American International University-Bangladesh (AIUB) | Aug 2019",
+                "tags": ["#Graduation", "#ComputerEngineering", "#AIUB"],
+                "shortContent": "Completed a B.Sc. in Computer Engineering, major in Biomedical Engineering, GPA 3.86/4.00.",
+                "fullContent": "<p>Graduated with a Bachelor of Science in Computer Engineering from AIUB in August 2019, majoring in Biomedical Engineering with a GPA of 3.86/4.00.</p><p>Capstone Project: <strong>Deep Learning-Based Design and Development of Citizen Surveillance and Social-Credit Information System for Bangladesh</strong>.</p><p>Supervised by Dr. Saniat Rahman Zishan.</p>",
+                "links": [{ "text": "PDF", "url": "https://www.aiub.edu/Files/Uploads/graduate-student-list-[academic-year-2018-19].pdf" }],
+                "thumbnail": "Resources/n1.jpg"
+            }
+        ];
+
+        // Update this part of your JavaScript to create the new layout
+        const container = document.getElementById('news-feed');
+        articles.forEach((article, index) => {
+            const div = document.createElement('div');
+            div.className = "news-article";
+            div.onclick = () => openModal(index);
+
+            div.innerHTML = `
+        <div class="news-thumbnail-container">
+            <img src="${article.thumbnail}" alt="${article.title}" class="news-thumbnail">
+        </div>
+        <div class="news-content">
+            <h2>${article.title}</h2>
+            <div class="article-meta">${article.meta}</div>
+            <div class="article-tags">${article.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}</div>
+            <p>${article.shortContent}</p>
+            <div class="article-links">
+                ${article.links.map(link => `<a href="${link.url}" target="_blank" onclick="event.stopPropagation()">${link.text}</a>`).join('')}
+            </div>
+        </div>
+    `;
+            container.appendChild(div);
+        });
+
+        function openModal(index) {
+            const article = articles[index];
+            document.getElementById('modal-title').innerText = article.title;
+            document.getElementById('modal-meta').innerText = article.meta;
+            document.getElementById('modal-tags').innerHTML = article.tags.map(tag => `<span class="tag">${tag}</span>`).join('');
+            document.getElementById('modal-content').innerHTML = article.fullContent;
+            document.getElementById('modal-links').innerHTML = article.links.map(link => `<a href="${link.url}" target="_blank">${link.text}</a>`).join('');
+            document.getElementById('news-modal').style.display = 'block';
+        }
+
+        function closeModal() {
+            document.getElementById('news-modal').style.display = 'none';
+        }
+
+        window.onclick = function (event) {
+            const modal = document.getElementById('news-modal');
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        // Same render and modal functions as before
+    </script>
+</body>
+
+</html>
